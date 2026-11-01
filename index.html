@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f1">
+  <meta name="description" content="Welcome to my singing world — a colorful little home for songs, covers, and the joy of singing.">
+  <title>My Singing World — songs from the heart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="My Singing World home"><span class="mark">♫</span><span class="wordmark-name">MY SINGING<br>WORLD</span></a>
+    <div class="topbar-note"><span class="live-dot"></span> A LITTLE MUSIC, A LOT OF HEART</div>
+    <a class="about-link" href="#about">MY STORY <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF MUSIC <span>✳</span></p>
+        <h1 id="hero-title">My singing<br><span>world.</span></h1>
+        <p class="hero-description">Songs I love, sung from the heart. Come in, find a favorite, and sing along.</p>
+        <a class="explore-link" href="#collection">FIND YOUR NEXT FAVORITE <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-rays"></div><div class="art-vinyl"><div class="vinyl-center">♫</div></div>
+        <span class="art-index">NOW PLAYING<br>GOOD VIBES ONLY</span>
+        <span class="art-side-note">SUNG WITH<br>LOVE <b>♥</b></span>
+      </div>
+      <div class="hero-foot"><span>TURN IT UP A LITTLE</span><span>01 — THE SONGBOOK</span></div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK A SONG <span> / AND PRESS PLAY</span></p><h2 id="collection-title">My songbook<span class="heading-period">.</span></h2></div>
+        <p class="collection-count" id="collection-count">A LITTLE MUSIC FOR YOUR DAY</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a song…" aria-label="Search songs"></label>
+        <div class="filters" id="filters" aria-label="Filter by category"><button class="filter active" data-category="all">ALL <span>—</span></button></div>
+        <div class="view-note"><span class="live-dot"></span> <span id="result-note">MADE TO BE PLAYED</span></div>
+      </div>
+      <div class="video-grid" id="video-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-symbol" aria-hidden="true">♫</span>
+        <p class="eyebrow">SOUND CHECK — ONE, TWO…</p>
+        <h3>Your first song goes here.</h3>
+        <p>Add a singing video to <code>videos/</code>, give the file a song title, and push it to GitHub. Your songbook will find it automatically.</p>
+        <a class="explore-link" href="README.md">HOW TO ADD A SONG <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-label"><p class="eyebrow">A NOTE FROM ME</p><span>MADE WITH ♡</span></div>
+      <div class="about-copy"><h2>Every song has<br>a <span>feeling.</span></h2><p>This is my singing world: a place to share the songs I love and the joy I find in singing them. Thanks for stopping by. I hope one of these brings a little music to your day.</p></div>
+      <div class="about-stamp" aria-hidden="true">SING<br>IT<br>LOUD<span>♫</span></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="footer-mark" href="#top">♫</a><span>THANKS FOR LISTENING — KEEP SINGING.</span><a href="#top">BACK TO TOP ↑</a></footer>
+
+  <dialog class="player-dialog" id="player-dialog" aria-label="Video player">
+    <div class="player-shell"><button class="close-player" id="close-player" aria-label="Close player">✕ <span>ESC</span></button><video id="player" controls playsinline preload="metadata"></video><div class="player-caption"><div><p class="eyebrow" id="player-category"></p><h2 id="player-title"></h2></div><p id="player-description"></p></div></div>
+  </dialog>
+  <script id="local-songbook" type="application/json">[
+    {"title":"Photo","src":"videos/Photo.mp4","category":"Cover","description":"A song cover from My Singing World."}
+  ]</script>
+  <script src="app.js"></script>
+</body>
+</html>
